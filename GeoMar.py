@@ -73,10 +73,7 @@ while True:
                 output_array.append(str(address) + " " + values["city"] + " " + values["state"])
                 window['output'].update(values=output_array)
                 window.read(timeout=200)
-                # print(str(address) + " Lubbock TX")
                 getLoc = loc.geocode(str(address) + " " + values["city"] + " " + values["state"])
-                # print(getLoc)
-
 
                 if (getLoc is None):
                     sg.popup(f"Please Check the name and spelling of {address} and the other addresses in the list and try again", title="ERROR", text_color="red", icon="2969398_location_map_marker_navigation_icon.ico")
